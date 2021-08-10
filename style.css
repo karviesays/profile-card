@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root {
+    --dark-gray: hsl(0, 0%, 59%);
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-blue:hsl(229, 23%, 23%);
+    --dark-gray-blue: hsl(227, 10%, 46%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    background-color: var(--dark-cyan);
+    /* Background Multiple SVGS */
+    background-image: 
+    url('/images/bg-pattern-top.svg'),
+    url('/images/bg-pattern-bottom.svg');
+    background-position:
+    right 10rem bottom 30rem,
+    left 15rem top 20rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* End Background SVG IMGS */
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    max-width: 375px;
+    width: 90%;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bg-top {
+    position: relative;
+    background: url(/images/bg-pattern-card.svg)no-repeat center center/cover;
+    min-height: 20vh;
+}
+
+.user-top {
+    text-align: center;
+}
+
+.user-pic {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: -3rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 100%;
+    border: .25rem solid #fff;
+}
+
+.user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    padding-bottom: 1rem;
+}
+
+.name {
+    padding-right: 1rem;
+}
+.age {
+    color: var(--dark-gray-blue);
+}
+.loc {
+    color: var(--dark-gray-blue);
+    font-size: .95rem;
+    padding-bottom: 2rem;
+}
+.socials {
+    border-top: .1rem solid hsla(0, 0%, 59%, 0.274);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 5rem;
+}
+
+.social-box p {
+    letter-spacing: .10rem;
+    padding-top: .5rem;
+    font-size: .65rem;
+    font-weight:700;
+    color: var(--dark-gray-blue);
+}
+
+@media (min-width: 1440px){
+    body {
+        max-width: 1440px;
+        margin: auto;
+        background-position:
+        right 40rem bottom 10rem,
+        left 35rem top 20rem;
+    }
+}
