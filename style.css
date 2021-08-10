@@ -34,7 +34,9 @@ body{
     justify-content: center;
     align-items: center;
 }
-
+.attribution {
+    margin-bottom: 2rem;
+}
 .card-container {
     max-width: 375px;
     width: 90%;
